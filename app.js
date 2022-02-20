@@ -16,7 +16,12 @@ app.use(basicAuth({
   }
 }))
 
-app.use('*', createProxyMiddleware({ target: 'https://api.telegram.org'}))
+app.use('*', createProxyMiddleware('/', {
+  target: 'https://api.telegram.org',
+  changeOrigin: true,
+  logLevel: 'debug',
+  secure: true
+}))
 
 // Start the Proxy
 app.listen(PORT, '0.0.0.0', () => {
