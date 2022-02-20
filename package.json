@@ -1,0 +1,26 @@
+{
+  "name": "my-http-proxy",
+  "version": "1.0.0",
+  "description": "Http Proxy",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/sadeghdev/my-http-proxy.git"
+  },
+  "author": "Sadegh Mohebbi <mohebbi.sadegh@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/sadeghdev/my-http-proxy/issues"
+  },
+  "homepage": "https://gitlab.com/sadeghdev/my-http-proxy#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "express-basic-auth": "^1.2.1",
+    "http-proxy-middleware": "^2.0.3",
+    "morgan": "^1.10.0"
+  }
+}
