@@ -9,16 +9,16 @@ const app = express()
 
 app.use(morgan('common'))
 
+app.get("/ping", (req, res, next) => {
+  return res.send('PONG!')
+})
+
 // handle authorization
 app.use(basicAuth({
   users: {
     'admin': 'SalamTelegram'
   }
 }))
-
-app.get("/ping", (req, res, next) => {
-  return res.send('PONG!')
-})
 
 app.use('*', createProxyMiddleware('/', {
   target: 'https://api.telegram.org',
