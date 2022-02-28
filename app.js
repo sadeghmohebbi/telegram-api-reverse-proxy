@@ -16,6 +16,10 @@ app.use(basicAuth({
   }
 }))
 
+app.get("/ping", (req, res, next) => {
+  return res.send('PONG!')
+})
+
 app.use('*', createProxyMiddleware('/', {
   target: 'https://api.telegram.org',
   changeOrigin: true,
