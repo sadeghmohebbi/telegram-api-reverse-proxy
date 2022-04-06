@@ -1,0 +1,30 @@
+<service>
+	<id>taaghchetelegramapiproxy.exe</id>
+	<name>TaaghcheTelegramApiProxy</name>
+	<description>The nodejs.org example web server.</description>
+	<executable>E:\Program Files\nodejs\node.exe</executable>
+	<argument>C:\ProgramData\npmglobal\node_modules\node-windows\lib\wrapper.js</argument>
+	<argument>--file</argument>
+	<argument>C:\Users\sa.mohebbi\Documents\telegram-api-reverse-proxy\app.js</argument>
+	<argument>--scriptoptions=</argument>
+	<argument>--log</argument>
+	<argument>TaaghcheTelegramApiProxy wrapper</argument>
+	<argument>--grow</argument>
+	<argument>0.25</argument>
+	<argument>--wait</argument>
+	<argument>1</argument>
+	<argument>--maxrestarts</argument>
+	<argument>3</argument>
+	<argument>--abortonerror</argument>
+	<argument>n</argument>
+	<argument>--stopparentfirst</argument>
+	<argument>false</argument>
+	<logmode>rotate</logmode>
+	<stoptimeout>30sec</stoptimeout>
+	<serviceaccount>
+		<domain>TAQCHE-050</domain>
+		<user>LocalSystem</user>
+		<password></password>
+	</serviceaccount>
+	<workingdirectory>C:\Users\sa.mohebbi\Documents\telegram-api-reverse-proxy</workingdirectory>
+</service>
