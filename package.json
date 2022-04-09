@@ -19,7 +19,6 @@
   "homepage": "https://gitlab.com/sadeghdev/my-http-proxy#readme",
   "dependencies": {
     "express": "^4.17.3",
-    "express-basic-auth": "^1.2.1",
     "http-proxy-middleware": "^2.0.3",
     "morgan": "^1.10.0"
   }
