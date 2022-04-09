@@ -1,6 +1,5 @@
 const express = require('express')
 const morgan = require('morgan')
-const basicAuth = require('express-basic-auth')
 const { createProxyMiddleware } = require('http-proxy-middleware')
 
 const PORT = process.env.PORT ?? 3000
@@ -12,13 +11,6 @@ app.use(morgan('common'))
 app.get("/ping", (req, res, next) => {
   return res.send('PONG!')
 })
-
-// handle authorization
-app.use(basicAuth({
-  users: {
-    'admin': 'SalamTelegram'
-  }
-}))
 
 app.use('*', createProxyMiddleware('/', {
   target: 'https://api.telegram.org',
