@@ -3,6 +3,7 @@ version: '3.4'
 services:
   tgapihttpproxy:
     image: tgapihttpproxy
+    restart: always
     build:
       context: .
       dockerfile: ./Dockerfile
