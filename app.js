@@ -16,7 +16,13 @@ app.use('*', createProxyMiddleware('/', {
   target: 'https://api.telegram.org',
   changeOrigin: true,
   logLevel: 'debug',
-  secure: true
+  secure: true,
+  onProxyReq: function (proxyReq, req, res) {
+    console.log("proxyReq >",JSON.stringify(proxyReq))
+  },
+  onProxyRes: function (proxyRes, req, res) {
+    console.log("proxyRes >", JSON.stringify(proxyRes))
+  }
 }))
 
 // Start the Proxy
