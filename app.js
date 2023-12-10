@@ -17,12 +17,6 @@ app.use('*', createProxyMiddleware('/', {
   changeOrigin: true,
   logLevel: 'debug',
   secure: true,
-  onProxyReq: function (proxyReq, req, res) {
-    console.log("proxyReq >",JSON.stringify(proxyReq))
-  },
-  onProxyRes: function (proxyRes, req, res) {
-    console.log("proxyRes >", JSON.stringify(proxyRes))
-  }
 }))
 
 // Start the Proxy
